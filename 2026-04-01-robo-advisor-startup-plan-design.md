@@ -1,9 +1,10 @@
 # AI Robo-Advisor Startup Plan
 
 **Date:** 2026-04-01
-**Status:** Approved
+**Status:** Approved (v2 — issues fixed)
 **Author:** Generated via Claude Code brainstorming
 **Last Updated:** 2026-04-01
+**Changelog:** v2 fixes Phase 5 timeline gap, AI Recommendations scope, tech stack clarity, and typo
 
 ---
 
@@ -59,7 +60,7 @@
 
 ### 3.2 Phase 2: Technical Learning (Months 4-6)
 
-**Mục tiêu:** Hiểu technical landscape, build technical foundation
+**Mục tiêu:** Hiểu technical landscape, produce stack specification for Phase 4 MVP build
 
 | Week | Topic | Deliverable |
 |---|---|---|
@@ -69,6 +70,8 @@
 | 20-21 | Security & compliance | Tech requirements checklist |
 | 22-23 | Prototype tech stack | Chosen stack + reasoning |
 | 24 | Phase 2 Report | Technical feasibility assessment |
+
+**Note:** Week 22-23 deliverable is the stack specification that Phase 4 (Build Prototype) will implement. This is not a learning exercise — it produces the definitive technical blueprint for the MVP.
 
 **Output:** `docs/research/phase2-technical-feasibility.md`
 
@@ -114,7 +117,8 @@
 | 57-60 | Regulatory consultation | Pre-application meetings |
 | 61-64 | Iterate product | Retention > 60% |
 | 65-68 | Investment thesis | Finalize market focus |
-| 72 | Decision Point | Raise seed / Apply license / Pivot |
+| 69-71 | Iteration + polish | Refine based on beta feedback, prepare for decision |
+| **72** | **Decision Point** | Raise seed / Apply license / Pivot |
 
 ---
 
@@ -141,7 +145,7 @@ Infrastructure: Vercel (Edge, Fluid Compute)
 
 1. **Risk Assessment Quiz** — Onboarding flow: questions → risk tolerance → recommended allocation
 2. **Portfolio Dashboard** — View holdings, performance chart, asset allocation pie chart
-3. **AI Recommendations** — "Based on your profile, consider X" (powered by Claude)
+3. **AI Recommendations** — Contextual suggestions surfaced in the dashboard and via chat. Covers: rebalancing (sell X%, buy Y%), risk adjustments (market moved, consider reducing exposure), and trade ideas (based on portfolio gaps). Interaction: on-demand chat in the app + weekly push summary. Implementation: Claude API (AI SDK v6) + AI Gateway, with RAG over market data and user portfolio context.
 4. **Paper Trading** — Simulate trades without real money
 5. **Basic Analytics** — Returns, volatility, Sharpe ratio, drawdown
 
@@ -293,7 +297,7 @@ Khi đã có license:
 | Metric | Description |
 |---|---|
 | Market Validation | Confirmed underserved segment with pain points |
-| Technical Feasibility | POC working, AI model accurarte > 60% |
+| Technical Feasibility | POC working, recommendation accuracy > 60% |
 | Business Model | Unit economics work on paper |
 | Regulatory Path | Clear license pathway identified |
 
